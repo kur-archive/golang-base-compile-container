@@ -11,9 +11,9 @@ RUN apk update && apk add go git musl-dev xz binutils \
     && mkdir -p /usr/local/bin
 
 # compression && packing
-RUN wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz \
-    && xz -d upx-3.96-amd64_linux.tar.xz \
-    && tar -xvf upx-3.96-amd64_linux.tar \
-    && cd upx-3.96-amd64_linux \
+RUN wget https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz \
+    && xz -d upx-3.95-amd64_linux.tar.xz \
+    && tar -xvf upx-3.95-amd64_linux.tar \
+    && cd upx-3.95-amd64_linux \
     && chmod a+x ./upx \
     && mv ./upx /usr/local/bin/
