@@ -7,7 +7,8 @@ RUN echo "export GO111MODULE=on" >> /etc/profile \
     && source /etc/profile
 
 # install
-RUN apk update && apk add go git musl-dev xz binutils
+RUN apk update && apk add go git musl-dev xz binutils \
+    && mkdir -p /usr/local/bin
 
 # compression && packing
 RUN wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz \
