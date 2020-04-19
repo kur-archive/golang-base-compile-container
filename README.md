@@ -5,4 +5,3 @@
 * xz
 * upx
 * strip
-* strip
