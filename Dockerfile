@@ -16,9 +16,4 @@ RUN wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux
     && tar -xvf upx-3.96-amd64_linux.tar \
     && cd upx-3.96-amd64_linux \
     && chmod a+x ./upx \
-    && mv ./upx /usr/local/bin/ \
-    && cd /root/go/bin \
-    && strip --strip-unneeded target \
-    && upx target \
-    && chmod a+x ./target \
-    && cp target /usr/local/bin
+    && mv ./upx /usr/local/bin/
